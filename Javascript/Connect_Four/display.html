@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Connect Four</title>
+    <link href="Game.css" rel="Stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="GameBoard.js"></script>
+</head>
+<body>
+<div class="js-game ui-game">
+    <button class="js-new-game ui-btn fl">New Game</button>
+    <input id="p1-name" class="fl ui-name red" placeholder="Player 1's Name" />
+    <input id="p2-name" class="fl ui-name black" placeholder="Player 2's Name" />
+    <div class="js-pieces ui-pieces ui-game-panel"></div>
+    <div class="js-game-board ui-game-board ui-game-panel"></div>
+    <div id="note"></div>
+</div>
+    <script type="text/javascript">
+        $(document).bind('ready', function () {
+            $('.js-game', 'body').GameBoard();
+        });
+    </script>
+</body>
+</html>
